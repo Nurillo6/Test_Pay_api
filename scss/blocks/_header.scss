@@ -1,0 +1,67 @@
+.site-header {
+    padding: 40px 0 74px;
+}
+.header {
+    @include Display($items:center, $space:space-between, $gap:0px);
+}
+
+.header__logo-wrapper {
+    @include Display($items:center, $space:start, $gap:64px);
+}
+.header__logo-link {
+    display: inline-block;
+}
+.header__list {
+    @include Display($items:center, $space:start, $gap:40px);
+}
+.header__link {
+    @include TextStyle($MB:0px, $FS:15px, $FW:700, $CLR:$text-clr, $LH:17px, $CASE:capitalize);
+    transition: all 0.3s linear;
+    &:hover{
+        color: $title-clr;
+    }
+}
+.header__link-demo {
+    @include ButtonStyle($BTN_W:173px, $BTN_PY:15px, $BTN_BG_CLR:$pink-clr,$BTN_BR_Radius:30px, $BTN_Border_CLR:transparent,$BTN_FS:16px,$BTN_FW:700, $BTN_LH:17px, $BTN_CLR:$white-clr,$BTN_CASE:inherit);
+    &:hover{
+        opacity: 75%;
+    }
+}
+
+.header__menu-btn{
+    border: none;
+    background-color: transparent;
+    display: none;
+}
+
+// Responsive 
+// 1.Responsive design - 3 ta px , oraliqqa tekshiribi mobile moslash 
+// 2.Adaptive design - har bir px uchun mobilega moslash .
+
+// Tablet responsive
+@media (max-width:850px){
+    .site-header {
+        padding: 40px 0 48px;
+    }
+    .header__logo-img{
+        width: 135px;
+        height: 38px;
+    }
+}
+
+
+// Mobile responsive
+@media (max-width:689px){
+    .site-header {
+        padding: 40px 0 32px;
+    }
+   .header__list{
+    display: none;
+   }
+   .header__link-demo{
+    display: none;
+   }
+   .header__menu-btn{
+    display: block;
+   }
+}
