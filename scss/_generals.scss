@@ -15,7 +15,9 @@ body{
     background-size: 780px 780px;
     background-position: right top;
 }
-
+h1 , h2, h3 , h4 {
+    font-family: "DM Serif Display", sans-serif;
+}
 @media (max-width:850px){
     body{
         background-image: url("../images/body-tablet-bg.png");

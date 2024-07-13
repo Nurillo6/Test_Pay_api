@@ -16,6 +16,7 @@
 
 
 @mixin ButtonStyle($BTN_W, $BTN_PY, $BTN_BG_CLR,$BTN_BR_Radius, $BTN_Border_CLR,$BTN_FS,$BTN_FW, $BTN_LH, $BTN_CLR,$BTN_CASE){
+    display: inline-block;
     width: $BTN_W;
     padding: $BTN_PY 0;
     background-color: $BTN_BG_CLR;
